@@ -9,18 +9,24 @@ public class PlayerMovement : MonoBehaviour
     public float forwardInput;
     public float horizontalInput;
 
-    void Start()
+    private Rigidbody rb;
+
+    void Awake()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         forwardInput = Input.GetAxis("Forward");
         horizontalInput = Input.GetAxis("Horizontal");
 
-        transform.Translate(Vector3.forward * speed * forwardInput * Time.deltaTime);
         transform.Rotate(Vector3.up * turnSpeed * horizontalInput * Time.deltaTime);
+    }
+
+    void FixedUpdate()
+    {
+        Vector3 move = transform.forward * speed * forwardInput * Time.fixedDeltaTime;
+        rb.MovePosition(rb.position + move);
     }
 }
