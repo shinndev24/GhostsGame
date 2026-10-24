@@ -20,8 +20,7 @@ public class GhostAI : MonoBehaviour
         if(collision.gameObject.CompareTag("Limit"))
         {
             transform.Rotate(0f, -90f, 0f);
-            turnOpportunity = 0.5f; //don't turn for 0.5 secs
-            Debug.Log(gameObject.name + " choca con " + collision.gameObject.name);
+            turnOpportunity = 1f; //don't turn for 1 secs
         }
     }
 }

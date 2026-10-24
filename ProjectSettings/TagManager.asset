@@ -5,17 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - Limit
+  - MapView
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Limit
+  - ceiling
+  - MapOnly
+  - WorldOnly
   - 
   - 
   - 
