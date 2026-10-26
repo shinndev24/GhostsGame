@@ -1,14 +1,13 @@
 using UnityEngine;
 
-public class MapScreenFollow : MonoBehaviour
+public class MapController : MonoBehaviour
 {
-    private bool isOpen;
+    public bool isOpen;
     [SerializeField] GameObject map;
     public float maxTime = 5f;
     public float cooldown = 10f;
-    //mientras el mapa este en uso, parar al jugador
-    //Limitar el uso del mapa a 5secs
-    //anadir cooldown para sacar el mapa (10s)
+    private float openTimer;
+    private float cooldownTimer;
 
     void Start()
     {
@@ -17,13 +16,42 @@ public class MapScreenFollow : MonoBehaviour
     
     void Update()
     {
+        if(cooldownTimer > 0f)
+        {
+            cooldownTimer -= Time.deltaTime;
+        }
+
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            isOpen = !isOpen;
-            if (map != null) 
+            if(!isOpen && cooldownTimer <= 0f)
             {
-                map.SetActive(isOpen);
-            }      
+                isOpen = true;
+                openTimer = 0f;
+                map.SetActive(true);
+            }
+            else if(isOpen)
+            {
+                isOpen = false;
+                map.SetActive(false);
+                openTimer = 0f;
+                cooldownTimer = cooldown;
+            } 
+        }
+
+        MapDuration();
+    }
+
+    void MapDuration()
+    {
+        if (!isOpen) return;
+        openTimer += Time.deltaTime;
+
+        if(openTimer > maxTime)
+        {
+            isOpen = false;
+            map.SetActive(false);
+            openTimer = 0f;
+            cooldownTimer = cooldown;
         }
     }
 }
