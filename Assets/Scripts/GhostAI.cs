@@ -13,23 +13,32 @@ public class GhostAI : MonoBehaviour
     public float turnDistance = 1f;
     public bool turnRight = true;
 
-    [Header("Damage")]
-    public int dmg;
-    public float invulnerability = 2f;
+    //attack
+    private float invulnerability = 10f;
     private bool canDmg = true;
 
     [Header("Hunting")]
-    public bool isCaptured;
     public bool isHunted;
     public float huntTimer;
 
     private int turnIndex = 0;
-    public int totalGhosts = 10;
+    private GhostManager ghostManager;
+
+    [Header("Animation")]
+    [SerializeField] AnimationClip fadeClip; 
+    [SerializeField] Animation fadeAnim;
+
+    void Start()
+    {
+        ghostManager = FindObjectOfType<GhostManager>();
+    }
 
     public void Hunt(float duration)
     {
         isHunted = true;
         huntTimer = duration;
+        fadeAnim.clip = fadeClip;
+        GetComponent<Collider>().enabled = false;
     }
 
     void Update()
@@ -42,10 +51,7 @@ public class GhostAI : MonoBehaviour
             if(huntTimer <= 0f)
             {
                 Destroy(gameObject);
-                totalGhosts --;
-
-                // aquí avisas al manager para la cinemática
-                //FindObjectOfType<CutsceneManager>().OnGhostCaptured(this);
+                ghostManager?.OnGhostCaptured();
             }
             return;
         }
@@ -59,22 +65,19 @@ public class GhostAI : MonoBehaviour
 
         Transform target = turnPoints[turnIndex];
 
-        // gira hacia el punto 
         Vector3 dir = target.position - transform.position;
         dir.y = 0f;
         transform.rotation = Quaternion.LookRotation(dir);
 
-        // avanza
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
-        // ¿llegó al punto?
         if (dir.magnitude < turnDistance)
         {
             turnIndex = (turnIndex + 1) % turnPoints.Count;
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         if(!canDmg) return;
         if(!collision.gameObject.CompareTag("Player")) return;
@@ -84,8 +87,13 @@ public class GhostAI : MonoBehaviour
 
         health.TakeDamage(1);
 
-        StartCoroutine(Invulnerability());
+        OrbSkill orb = collision.gameObject.GetComponent<OrbSkill>();
+        if (orb != null) orb.CancelCharge();
         
+        StartCoroutine(Invulnerability());
+
+        fadeAnim.Stop();
+        fadeAnim.Play("FadeOut");
     }
 
     IEnumerator Invulnerability()

@@ -1,93 +1,131 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class OrbSkill : MonoBehaviour
 {
-    public Image abilityBar; 
-
     public HuntRange range;
     public float duration = 3f;
-    public int maxCharges = 2;
     public float cooldown = 8f;
     public float chargeTime = 1.5f;
+    public float maxCharge;
+    public float charge;
 
-    public int charges;
     public bool isCharging;
     public float chargeProgress;
 
     private float chargeTimer;
-    private float rechargeTimer;
+    private float cooldownTimer;
+    public CutsceneManager cinematic;
+
+    [SerializeField] AnimationClip animClip;
+    [SerializeField] Animation animator;
+    [SerializeField] Animation orbAnimation;
+    [SerializeField] OrbBar orbBar;
+    [SerializeField] TMPro.TMP_Text ghostsNearText; 
 
     void Start()
     {
-        charges = maxCharges;
+        orbBar.SetMaxCharge(maxCharge);
+        orbAnimation.Play("Idle");
     }
 
     void Update()
     {
-        // reload
-        if (charges < maxCharges)
-        {
-            rechargeTimer += Time.deltaTime;
-            if (rechargeTimer >= cooldown)
-            {
-                rechargeTimer = 0f;
-                charges++;
-            }
-        }
-
-        bool holding = Input.GetKey(KeyCode.E) && charges > 0;
+        if (cooldownTimer > 0f) cooldownTimer -= Time.deltaTime;
+        bool holding = Input.GetKey(KeyCode.E) && cooldownTimer <= 0f;
 
         if (holding)
         {
             if (!isCharging)
             {
-                if (range.ghostsInRange.Count == 0)
+                bool hasTarget = false;
+                foreach (GhostAI ghost in range.ghostsInRange)
+                {
+                    if (!ghost.isHunted)
+                    {
+                        hasTarget = true;
+                        break;
+                    }
+                }
+                if (!hasTarget)
                 {
                     CancelCharge();
                     return;
                 }
                 isCharging = true;
                 chargeTimer = 0f;
-            }
 
-            
+                animator.Stop();
+                animator.Play();
+            }
 
             chargeTimer += Time.deltaTime;
             chargeProgress = Mathf.Clamp01(chargeTimer / chargeTime);
 
+            orbBar.SetCharge(chargeProgress * maxCharge);
+
             if (chargeTimer >= chargeTime)
             {
-                if (range.ghostsInRange.Count > 0)
+                GhostAI target = null;
+
+                foreach (GhostAI ghost in range.ghostsInRange)
                 {
-                    range.ghostsInRange[0].Hunt(duration);
-                    charges--;
+                    if (!ghost.isHunted)
+                    {
+                        target = ghost;
+                        break;
+                    }
                 }
-                CancelCharge();
+
+                if (target != null)
+                {
+                    target.Hunt(duration);
+                    cinematic.OnGhostCaptured(); //play image
+                    cooldownTimer = cooldown;
+                    CancelCharge();
+                    return;
+                } 
             }
         }
-        else
-        {
-            CancelCharge();
-        }
-
-        if (isCharging)
-        {
-            abilityBar.fillAmount = chargeProgress / chargeTime;
-        }
-        else
-        {
-            abilityBar.fillAmount = (float)charges / maxCharges;
-        }
+        else CancelCharge();
+        UpdateGhostsNearText();
     }
 
-    void CancelCharge()
+    public void CancelCharge()
     {
         isCharging = false;
         chargeTimer = 0f;
         chargeProgress = 0f;
+        orbBar.SetCharge(0f);
     }
 
+    public float GetCooldownProgress()
+    {
+        return Mathf.Clamp01(cooldownTimer / cooldown);
+    }
+
+    public void SetCharge(float chargeChange)
+    {
+        charge += chargeChange;
+        charge = Mathf.Clamp(charge, 0, maxCharge);
+
+        orbBar.SetCharge(charge);
+    }
+
+    void UpdateGhostsNearText()
+    {
+        bool near = false;
+        foreach(GhostAI ghost in range.ghostsInRange)
+        {
+            if (!ghost.isHunted) 
+            { 
+                near = true; break; 
+            }
+        }
+
+        if(ghostsNearText != null)
+        {
+            ghostsNearText.gameObject.SetActive(near);
+        }
+    }
 }

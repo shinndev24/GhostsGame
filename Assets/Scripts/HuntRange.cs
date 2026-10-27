@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class HuntRange : MonoBehaviour
 {
-    public List<GhostAI> ghostsInRange = new List<GhostAI>();
+    public List<GhostAI> ghostsInRange = new();
 
     void OnTriggerEnter(Collider other)
     {
         GhostAI ghost = other.GetComponentInParent<GhostAI>();
 
-        if(ghost != null)
+        if(ghost != null && !ghostsInRange.Contains(ghost))
         {
             ghostsInRange.Add(ghost);
         }

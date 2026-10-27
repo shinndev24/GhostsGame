@@ -54,4 +54,9 @@ public class MapController : MonoBehaviour
             cooldownTimer = cooldown;
         }
     }
+
+    public float GetCooldownProgress()
+    {
+        return Mathf.Clamp01(cooldownTimer / cooldown);
+    }
 }
