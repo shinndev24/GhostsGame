@@ -6,6 +6,7 @@ using UnityEngine;
 public class GhostManager : MonoBehaviour
 {
     public int totalGhosts = 10;
+    private int ghostsRemaining = 10;
     public TMPro.TMP_Text ghostText;
     int captured = 0;
 
@@ -18,6 +19,15 @@ public class GhostManager : MonoBehaviour
     {
         captured ++;
         UpdateUI();
+
+        ghostsRemaining--;
+        Debug.Log("Fantasmas restantes: " + ghostsRemaining);
+
+        if (ghostsRemaining <= 0)
+        {
+            Debug.Log("All captured!");
+            // SceneManager.LoadScene("Victory");
+        }
     }
 
     void UpdateUI()
