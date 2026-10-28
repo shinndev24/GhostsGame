@@ -1,11 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CutsceneManager : MonoBehaviour
 {
     [SerializeField] GameObject[] cinematics;
     [SerializeField] GameObject img; 
+    [SerializeField] Animation fadeIn;
+    [SerializeField] GameObject fadeInScreen;
+    private float fadeDuration = 0.5f;
 
     private int currentIndex = 0;
     private bool isOpen = false;
@@ -22,10 +24,21 @@ public class CutsceneManager : MonoBehaviour
 
         cinematics[currentIndex].SetActive(true);
         img.SetActive(true);
-        //pause game
-        Time.timeScale = 0f;
+
+        fadeInScreen.SetActive(true);
+        fadeIn.Rewind("FadeIn"); 
+        fadeIn.Play("FadeIn");  
+        
         isOpen = true;
+        StartCoroutine(PauseAfterFade());
         currentIndex ++;
+    }
+
+    IEnumerator PauseAfterFade()
+    {
+        yield return new WaitForSecondsRealtime(fadeDuration);
+        fadeInScreen.SetActive(false);
+        Time.timeScale = 0f;
     }
 
     public void CloseCinematic()
@@ -33,6 +46,7 @@ public class CutsceneManager : MonoBehaviour
         if (!isOpen) return; 
         cinematics[currentIndex - 1].SetActive(false);  
         img.SetActive(false);
+        fadeInScreen.SetActive(false);
         //continue game
         Time.timeScale = 1f;
         isOpen = false;

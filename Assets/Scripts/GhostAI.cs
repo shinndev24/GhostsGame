@@ -26,7 +26,7 @@ public class GhostAI : MonoBehaviour
 
     [Header("Animation")]
     [SerializeField] AnimationClip fadeClip; 
-    [SerializeField] Animation fadeAnim;
+    [SerializeField] Animation fadeOut;
 
     void Start()
     {
@@ -37,7 +37,6 @@ public class GhostAI : MonoBehaviour
     {
         isHunted = true;
         huntTimer = duration;
-        fadeAnim.clip = fadeClip;
         GetComponent<Collider>().enabled = false;
     }
 
@@ -92,8 +91,8 @@ public class GhostAI : MonoBehaviour
         
         StartCoroutine(Invulnerability());
 
-        fadeAnim.Stop();
-        fadeAnim.Play("FadeOut");
+        fadeOut.Stop();
+        fadeOut.Play("FadeOut");
     }
 
     IEnumerator Invulnerability()

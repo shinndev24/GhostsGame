@@ -21,11 +21,9 @@ public class GhostManager : MonoBehaviour
         UpdateUI();
 
         ghostsRemaining--;
-        Debug.Log("Fantasmas restantes: " + ghostsRemaining);
 
         if (ghostsRemaining <= 0)
         {
-            Debug.Log("All captured!");
             // SceneManager.LoadScene("Victory");
         }
     }
