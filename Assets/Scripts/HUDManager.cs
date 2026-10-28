@@ -11,9 +11,9 @@ public class HUDManager : MonoBehaviour
     void Update()
     {
         float orbCooldown = orb.GetCooldownProgress();
-        orbCooldownText.text = "Orb: " + Mathf.CeilToInt(orbCooldown * orb.cooldown) + "s";
+        orbCooldownText.text = Mathf.CeilToInt(orbCooldown * orb.cooldown) + "s";
 
         float mapCooldown = map.GetCooldownProgress();
-        mapCooldownText.text = "Map: " + Mathf.CeilToInt(mapCooldown * map.cooldown) + "s";
+        mapCooldownText.text = Mathf.CeilToInt(mapCooldown * map.cooldown) + "s";
     }
 }
