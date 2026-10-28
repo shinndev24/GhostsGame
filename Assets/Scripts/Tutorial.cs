@@ -25,7 +25,7 @@ public class Tutorial : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0))
         {
             if (isTyping)
             {
@@ -38,8 +38,8 @@ public class Tutorial : MonoBehaviour
                 index++;
                 if (index >= lines.Length)
                 {
-                    LockPlayer(false);   // desbloquea al terminar
-                    gameObject.SetActive(false);   // oculta el manager
+                    LockPlayer(false);
+                    gameObject.SetActive(false);
                 }
                 else
                 {
@@ -64,7 +64,7 @@ public class Tutorial : MonoBehaviour
     void LockPlayer(bool locked)
     {
         if (playerMovement != null)
-            playerMovement.enabled = !locked;   // apaga/enciende el movimiento
+            playerMovement.enabled = !locked;
         if (orbSkill != null)
             orbSkill.enabled = !locked;         // apaga/enciende la E
     }

@@ -607,11 +607,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1974672566}
   lines:
-  - Well, let's finish this fast. It's been ages since I haven't done this... uhh,
-    how was it
-  - Oh yeah, open map with SPACE
-  - Aaand.. my orb! yeah! this is what will make them leave.
-  - If I held E next to a ghost... yep, that was it, easy!
+  - Well, let's finish this fast. It's been ages since I haven't done an expedition...
+    uhh, how was it?
+  - Oh yeah, open and close map with SPACE.
+  - This is no ordinary map, though, it shows the footsteps of ghosts nearby, even
+    if they're in other room.
+  - Cool, right? It's like it was made for this exact situation, heh.
+  - Aaand.. my orb, yeah. My fancy orb. This is what will make them leave.
+  - If I held E next to a ghost... yep, that was it, easy! This bar below should
+    show when it charges.
+  - If I remember well, these ghosts are not visible, only their footsteps are, so
+    I better make sure I catch them from the front.
+  - It doesn't feel nice when you bump into them while trying to sneak them from
+    behind, talking from experience.
+  - No more chit-chat! I got places to be.
   player: {fileID: 457946184}
 --- !u!1 &38937285
 GameObject:
