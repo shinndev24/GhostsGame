@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GhostManager : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class GhostManager : MonoBehaviour
 
         if (ghostsRemaining <= 0)
         {
-            // SceneManager.LoadScene("Victory");
+            SceneManager.LoadScene("Victory");
         }
     }
 

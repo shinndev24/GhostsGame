@@ -83,6 +83,7 @@ public class OrbSkill : MonoBehaviour
                     cinematic.OnGhostCaptured(); //play image
                     cooldownTimer = cooldown;
                     CancelCharge();
+                    orbAnimation.Play("Idle");
                     return;
                 } 
             }

@@ -66,6 +66,6 @@ public class Tutorial : MonoBehaviour
         if (playerMovement != null)
             playerMovement.enabled = !locked;
         if (orbSkill != null)
-            orbSkill.enabled = !locked;         // apaga/enciende la E
+            orbSkill.enabled = !locked;
     }
 }
