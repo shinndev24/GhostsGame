@@ -22,6 +22,8 @@ public class OrbSkill : MonoBehaviour
     [SerializeField] Animation orbAnimation;
     [SerializeField] OrbBar orbBar;
     [SerializeField] TMPro.TMP_Text ghostsNearText; 
+    [SerializeField] AudioSource sfxSource;
+    [SerializeField] AudioClip orbSound;
 
     void Start()
     {
@@ -80,6 +82,7 @@ public class OrbSkill : MonoBehaviour
                 if (target != null)
                 {
                     target.Hunt(duration);
+                    PlayOrbSound();
                     cinematic.OnGhostCaptured(); //play image
                     cooldownTimer = cooldown;
                     CancelCharge();
@@ -128,5 +131,10 @@ public class OrbSkill : MonoBehaviour
         {
             ghostsNearText.gameObject.SetActive(near);
         }
+    }
+
+    public void PlayOrbSound()
+    {
+        sfxSource.PlayOneShot(orbSound);
     }
 }
