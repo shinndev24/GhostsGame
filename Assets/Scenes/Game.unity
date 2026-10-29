@@ -1392,8 +1392,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -681, y: -51}
-  m_SizeDelta: {x: 844.57056, y: 150.1712}
+  m_AnchoredPosition: {x: -696, y: -183}
+  m_SizeDelta: {x: 844.571, y: 330.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &98384038
 MonoBehaviour:
@@ -1422,13 +1422,16 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 9
     m_MaxSize: 90
-    m_Alignment: 1
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit amet
+  m_Text: '...I wonder how you would feel if you took our place and experienced what
+    being trapped in death feels.
+
+'
 --- !u!222 &98384039
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1961,7 +1964,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit Amet
+  m_Text: You walk around these rooms like you own them. You do not...
 --- !u!222 &161991117
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3968,6 +3971,134 @@ Transform:
   - {fileID: 253087353}
   m_Father: {fileID: 1105768530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &377220082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 377220084}
+  - component: {fileID: 377220083}
+  m_Layer: 0
+  m_Name: BgAmbience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &377220083
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377220082}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 6264036828776510105, guid: be9dca0cb70b24245879ea8fdc0cb97e, type: 2}
+  m_audioClip: {fileID: 8300000, guid: f2183a39c3aa24cb9b21f5e581adaf3a, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &377220084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377220082}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 636.20654, y: 242.62454, z: 638.29535}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &392426587
 GameObject:
   m_ObjectHideFlags: 0
@@ -5071,6 +5202,7 @@ GameObject:
   - component: {fileID: 457946190}
   - component: {fileID: 457946192}
   - component: {fileID: 457946193}
+  - component: {fileID: 457946194}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -5245,6 +5377,106 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 0
   livesText: {fileID: 1127404349}
+  sfxSource: {fileID: 457946194}
+  damageSound: {fileID: 8300000, guid: 08dde6b3ac64048ec880a15d0913455f, type: 3}
+  hit: {fileID: 724852965}
+  hitDuration: 1.5
+--- !u!82 &457946194
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457946184}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -426826841508873892, guid: be9dca0cb70b24245879ea8fdc0cb97e, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 08dde6b3ac64048ec880a15d0913455f, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &465719932
 GameObject:
   m_ObjectHideFlags: 0
@@ -5611,8 +5843,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -681, y: -51}
-  m_SizeDelta: {x: 844.57056, y: 150.1712}
+  m_AnchoredPosition: {x: -681, y: -141.31}
+  m_SizeDelta: {x: 844.571, y: 330.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &493680406
 MonoBehaviour:
@@ -5641,13 +5873,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 9
     m_MaxSize: 90
-    m_Alignment: 1
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit amet
+  m_Text: ..Nothing here is yours. Yet it seems you own us somehow.
 --- !u!222 &493680407
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6607,6 +6839,7 @@ GameObject:
   - component: {fileID: 586940323}
   - component: {fileID: 586940325}
   - component: {fileID: 586940324}
+  - component: {fileID: 586940326}
   m_Layer: 9
   m_Name: Orb
   m_TagString: Untagged
@@ -6730,6 +6963,102 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 3.6473749
   m_Center: {x: -0.7457149, y: -3.0884638, z: 1.1000748}
+--- !u!82 &586940326
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586940317}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -426826841508873892, guid: be9dca0cb70b24245879ea8fdc0cb97e, type: 2}
+  m_audioClip: {fileID: 8300000, guid: aa56a9a240f7f4261b6b3c11198a0b1a, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.506
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &590225112
 GameObject:
   m_ObjectHideFlags: 0
@@ -8435,8 +8764,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -681, y: -51}
-  m_SizeDelta: {x: 844.57056, y: 150.1712}
+  m_AnchoredPosition: {x: -692, y: -142}
+  m_SizeDelta: {x: 837.802, y: 235.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &709957547
 MonoBehaviour:
@@ -8465,13 +8794,15 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 9
     m_MaxSize: 90
-    m_Alignment: 1
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit amet
+  m_Text: '...Not even the worst demon could have done what you did.
+
+'
 --- !u!222 &709957548
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8554,6 +8885,140 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711104353}
+  m_CullTransparentMesh: 1
+--- !u!1 &724852963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 724852964}
+  - component: {fileID: 724852966}
+  - component: {fileID: 724852965}
+  m_Layer: 5
+  m_Name: Hit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &724852964
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724852963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1252817811}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -68}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &724852965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724852963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Hit, Watch Out!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 636e53ee108de59459be99a5eaf34c22, type: 2}
+  m_sharedMaterial: {fileID: -4369105125592315626, guid: 636e53ee108de59459be99a5eaf34c22, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190806
+  m_fontColor: {r: 0.8396226, g: 0.008061503, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 70
+  m_fontSizeBase: 70
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -435.8197, y: -131.74217, z: -433.68982, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &724852966
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724852963}
   m_CullTransparentMesh: 1
 --- !u!1 &725626481
 GameObject:
@@ -8929,7 +9394,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit Amet
+  m_Text: The ten of us are free now. Free from all those years of agony, the only
+    thing we were allowed to feel...
 --- !u!222 &743145884
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9265,8 +9731,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -681, y: -51}
-  m_SizeDelta: {x: 844.57056, y: 150.1712}
+  m_AnchoredPosition: {x: -692.1614, y: -94.826996}
+  m_SizeDelta: {x: 822.248, y: 237.825}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &769759384
 MonoBehaviour:
@@ -9295,13 +9761,15 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 9
     m_MaxSize: 90
-    m_Alignment: 1
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit amet
+  m_Text: '...You finally show yourself, and we are prepared for it.
+
+'
 --- !u!222 &769759385
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11309,8 +11777,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -681, y: -51}
-  m_SizeDelta: {x: 844.57056, y: 150.1712}
+  m_AnchoredPosition: {x: -681, y: -183.824}
+  m_SizeDelta: {x: 844.571, y: 415.818}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &895869842
 MonoBehaviour:
@@ -11339,13 +11807,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 9
     m_MaxSize: 90
-    m_Alignment: 1
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit amet
+  m_Text: ...Now we experience a different emotion we can't identify... Guess this
+    is what it feels to rest in peace. Thank you.
 --- !u!222 &895869843
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11388,8 +11857,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -681, y: -51}
-  m_SizeDelta: {x: 844.57056, y: 150.1712}
+  m_AnchoredPosition: {x: -750, y: -117.58}
+  m_SizeDelta: {x: 844.571, y: 235.159}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &898167669
 MonoBehaviour:
@@ -11418,13 +11887,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 9
     m_MaxSize: 90
-    m_Alignment: 1
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit amet
+  m_Text: ...You will pay for what you called sacred.
 --- !u!222 &898167670
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14713,8 +15182,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 674.27, y: 120.54}
-  m_SizeDelta: {x: 681, y: 241.09}
+  m_AnchoredPosition: {x: 712.29333, y: 120.54}
+  m_SizeDelta: {x: 757.047, y: 241.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1126171741
 MonoBehaviour:
@@ -14749,7 +15218,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit Amet
+  m_Text: Is this what our lives mean to you? Will you make them forget us that easily?...
 --- !u!222 &1126171742
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14842,8 +15311,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -14878,7 +15347,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -22.06646, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -15339,7 +15808,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit Amet
+  m_Text: A week has passed already, he only comes down to this floor to count us,
+    as if he counted his cattle...
 --- !u!222 &1156843300
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16173,7 +16643,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit Amet
+  m_Text: We were never buried, and our loved ones never learned what became of us...
 --- !u!222 &1230654087
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16321,7 +16791,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -293, y: -105.1}
+  m_AnchoredPosition: {x: -292.99988, y: -105.1001}
   m_SizeDelta: {x: 150, y: 464.25012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1240852034
@@ -16465,6 +16935,7 @@ RectTransform:
   - {fileID: 406068219}
   - {fileID: 598699118}
   - {fileID: 1240852033}
+  - {fileID: 724852964}
   m_Father: {fileID: 1252550633}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -17066,7 +17537,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit Amet
+  m_Text: Aubrey. You called us by number, and never learned our names...
 --- !u!222 &1294936454
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18263,8 +18734,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -681, y: -51}
-  m_SizeDelta: {x: 844.57056, y: 150.1712}
+  m_AnchoredPosition: {x: -681, y: -185.156}
+  m_SizeDelta: {x: 844.571, y: 418.484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1385733113
 MonoBehaviour:
@@ -18293,13 +18764,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 9
     m_MaxSize: 90
-    m_Alignment: 1
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit amet
+  m_Text: ...That sacred power of yours, guess it really leads to immortality, just
+    take a look at what you've done to us.
 --- !u!222 &1385733114
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19036,8 +19508,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -681, y: -51}
-  m_SizeDelta: {x: 844.57056, y: 150.1712}
+  m_AnchoredPosition: {x: -681, y: -189.074}
+  m_SizeDelta: {x: 844.571, y: 426.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1462661876
 MonoBehaviour:
@@ -19066,13 +19538,16 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 9
     m_MaxSize: 90
-    m_Alignment: 1
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit amet
+  m_Text: '...We gave up on finding ways out, we still don''t know what he''s planning.
+    Someone, anyone, help us, I beg you.
+
+'
 --- !u!222 &1462661877
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19432,8 +19907,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -681, y: -51}
-  m_SizeDelta: {x: 844.57056, y: 150.1712}
+  m_AnchoredPosition: {x: -715, y: -167.11}
+  m_SizeDelta: {x: 853.913, y: 279.191}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1475818523
 MonoBehaviour:
@@ -19462,13 +19937,15 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 9
     m_MaxSize: 90
-    m_Alignment: 1
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit amet
+  m_Text: '...But what''s the use if we cannot share it with the ones we love?
+
+'
 --- !u!222 &1475818524
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19561,8 +20038,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -20601,8 +21078,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -20637,7 +21114,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.25112915, w: 0}
+  m_margin: {x: 0, y: 0, z: -58.716324, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -22307,7 +22784,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit Amet
+  m_Text: Wait until the rest come for you...
 --- !u!222 &1684384230
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22436,7 +22913,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit Amet
+  m_Text: After all these years, the palace has fallen. Now we can see the sky...
 --- !u!222 &1708172288
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23308,7 +23785,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit Amet
+  m_Text: You do not remember us, but we remember you...
 --- !u!222 &1816042099
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23565,8 +24042,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -24496,8 +24973,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 674.27, y: 120.54}
-  m_SizeDelta: {x: 681, y: 241.09}
+  m_AnchoredPosition: {x: 723.708, y: 79.653}
+  m_SizeDelta: {x: 779.877, y: 322.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1908075800
 MonoBehaviour:
@@ -24532,7 +25009,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit Amet
+  m_Text: You humans want to live more than anything, but chase danger as if you
+    forgot your own desire...
 --- !u!222 &1908075801
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25284,8 +25762,8 @@ MonoBehaviour:
   orbAnimation: {fileID: 586940323}
   orbBar: {fileID: 1967349273}
   ghostsNearText: {fileID: 359047411}
-  sfxSource: {fileID: 0}
-  orbSound: {fileID: 0}
+  sfxSource: {fileID: 586940326}
+  orbSound: {fileID: 8300000, guid: aa56a9a240f7f4261b6b3c11198a0b1a, type: 3}
 --- !u!4 &1967349272
 Transform:
   m_ObjectHideFlags: 0
@@ -25656,8 +26134,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -681, y: -51}
-  m_SizeDelta: {x: 844.57056, y: 150.1712}
+  m_AnchoredPosition: {x: -681, y: -101.20598}
+  m_SizeDelta: {x: 844.571, y: 250.583}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2000487071
 MonoBehaviour:
@@ -25686,13 +26164,15 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 9
     m_MaxSize: 90
-    m_Alignment: 1
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem Ipsum sit amet
+  m_Text: '...we remained here, hoping anyone would come help us.
+
+'
 --- !u!222 &2000487072
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27549,7 +28029,8 @@ SceneRoots:
   - {fileID: 1105768530}
   - {fileID: 1252550633}
   - {fileID: 1427745104}
+  - {fileID: 845651241}
   - {fileID: 1370661981}
   - {fileID: 1000894043}
   - {fileID: 1967349272}
-  - {fileID: 845651241}
+  - {fileID: 377220084}
